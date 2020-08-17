@@ -38,7 +38,7 @@ public class User {
 
         String response = restTemplate.exchange(
                 "http://localhost:8080/user/delete?id=" + id,
-                HttpMethod.GET,
+                HttpMethod.DELETE,
                 entity,
                 String.class
         ).getBody();
@@ -111,7 +111,7 @@ public class User {
 
             response = restTemplate.exchange(
                     "http://localhost:8080/user/update",
-                    HttpMethod.POST,
+                    HttpMethod.PUT,
                     entity,
                     String.class
             ).getBody();
